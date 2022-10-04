@@ -1,0 +1,81 @@
+
+Nicole Sharman
+EXSM 3931: Web Development Foundations
+Pseudocode - Assignment 6.
+
+//Hungry Customer Perspective:
+
+Customer approaches vending machine
+
+IF [Customer_is_hungry] = yes
+ANDIF [Customer_has_money] = yes
+
+THEN Customer inspect machine choices  
+
+ELSE Customer Walk Away
+
+Customer Inserts Money
+
+While customer money entered is greater than zero
+    Display balance on screen
+    IF customer enters more than or equal to cost of chips
+    ANDIF and if they enter more than or equal to cost of candy
+    THEN ask for the code or cancel transaction
+    ELSE ask for more money or cancel transaction
+
+        IF customer chooses chips
+        THEN machine dispenses 1 pack of chips 
+        Chip count goes down by 1
+        Money entered goes down by cost of 1 pack
+        Money deposited (profit) goes up by cost of 1 pack
+        Display balance on screen
+        
+        ELSEIF customer chooses candy
+        THEN machine dispenses 1 pack of candy
+        Candy count goes down by 1
+        Money entered goes down by cost of 1 pack
+        Money deposited (profit) goes up by cost of 1 pack
+        Display balance on screen
+        
+        ELSEIF Customer chooses Cancel
+        Machine dispenses money back to customer
+        
+EndWhile
+
+Display "Thank you"
+
+
+
+
+
+//Owner of Vending Machine Perspective:
+
+Owner approaches vending machine
+
+Owner Inserts Key
+
+    IF key does not turn and open door
+    THEN owner tries next key
+    ELSE Owner checks snack count
+
+FOR each snack in machine
+
+    owner checks snack count
+    IF snack count is less than original amount
+    THEN owner adds snack to equal max snack amount
+    ELSE check next snack
+
+ENDFOR
+
+Owner checks money deposited
+
+    IF money deposited is greater than original float amount
+    THEN owner removes difference between float and money deposited
+    ELSE owner calculates profit
+
+    IF snack count is less than original
+    ANDIF money deposited is equal to original float amount or less than expected
+    THEN owner was robbed and is angry
+    ELSE owner is happy.
+
+Owner closes machine and walks away.
